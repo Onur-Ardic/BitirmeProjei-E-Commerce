@@ -1,0 +1,1 @@
+Proje halen geliştirme aşamasındadır.
