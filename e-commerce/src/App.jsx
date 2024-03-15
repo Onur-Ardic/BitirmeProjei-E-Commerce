@@ -73,8 +73,32 @@ function App() {
 
   const defaultCartState = {
     items: [],
+  };
+
+  const defaultFavState = {
     favitems: [],
   };
+
+  const favReducer = (state, action) => {
+    switch (action.type) {
+      case "ADDFAV":
+        let favİtemUpdate = [...state.favitems];
+        favİtemUpdate = [...state.favitems, action.favitem];
+        return {
+          favitems: favİtemUpdate,
+        };
+
+      case "REMOVEFAV":
+        return state;
+
+      case "CLEARFAV":
+        return state;
+
+      default:
+    }
+  };
+
+  const [cartFav, dispatchFavAction] = useReducer(favReducer, defaultFavState);
 
   const [cartState, dispatchCartAction] = useReducer(
     cartReducer,
@@ -95,7 +119,7 @@ function App() {
     favCartHandler,
     closeFavCartHandler,
     items: cartState.items,
-    favitems: cartState.favitems,
+    favitems: cartFav.favitems,
     addİtem: (item) => {
       {
         dispatchCartAction({ type: "ADD", item });
@@ -104,8 +128,10 @@ function App() {
     removeİtem: () => {},
     clearCart: () => {},
     addFav: (favitem) => {
-      dispatchCartAction({ type: "ADDFAV", favitem });
+      dispatchFavAction({ type: "ADDFAV", favitem });
     },
+    removeFav: () => {},
+    clearFav: () => {},
   };
 
   return (
