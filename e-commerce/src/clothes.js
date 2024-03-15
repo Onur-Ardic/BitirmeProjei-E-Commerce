@@ -36,16 +36,16 @@ const clothesdata = [
     img: "/images/Clothes/jacket-brown.png",
     img1: "/images/Clothes/jacket-brown-1.png",
   },
-  {
-    id: 5,
-    name: "Japan Style Hırka",
-    oldPrice: 680.0,
-    price: 450.0,
-    discount: 40,
-    img: "/images/Clothes/japanese-jacket.jpg",
-    img1: "/images/Clothes/japanese-jacket-1.png",
-    img2: "/images/Clothes/japanese-jacket-2.png",
-  },
+  // {
+  //   id: 5,
+  //   name: "Japan Style Hırka",
+  //   oldPrice: 680.0,
+  //   price: 450.0,
+  //   discount: 40,
+  //   img: "/images/Clothes/japanese-jacket.jpg",
+  //   img1: "/images/Clothes/japanese-jacket-1.png",
+  //   img2: "/images/Clothes/japanese-jacket-2.png",
+  // },
 ];
 
 export default clothesdata;
