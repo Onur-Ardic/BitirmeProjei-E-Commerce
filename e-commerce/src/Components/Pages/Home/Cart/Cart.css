@@ -1,0 +1,95 @@
+.cart-wrapper {
+  height: 100vh;
+  width: 300px;
+  position: fixed;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  right: 0;
+  top: 0;
+  background-color: var(--color-white-1);
+  border-left: 1px solid #000;
+  animation: closeOn 1s ease;
+}
+
+@keyframes closeOn {
+  from {
+    opacity: 0;
+    transform: translateX(25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cart-wrapper .cart-title {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.cart-wrapper img {
+  width: 50px;
+  border-left: 1px solid #000;
+}
+
+.cart-wrapper .cart-item {
+  display: flex;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0.3rem;
+  position: relative;
+}
+
+.cart-wrapper .cart-item .amount {
+  color: red;
+}
+
+.cart-wrapper .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 20px;
+}
+
+.cart-wrapper .cart-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.cart-wrapper .cart-buttons-wrapper .delete-btn {
+  width: 100%;
+  background-color: red;
+  padding: 0.6rem;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid red;
+}
+
+.cart-wrapper .cart-buttons-wrapper .delete-btn:hover {
+  background-color: #fff;
+  color: black;
+  transition: 0.2s ease;
+  border: 1px solid red;
+}
+
+.cart-wrapper .cart-buttons-wrapper .basket-btn {
+  background-color: var(--light-blue);
+  padding: 0.6rem;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid var(--light-blue);
+}
+
+.cart-wrapper .cart-buttons-wrapper .basket-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid var(--light-blue);
+  transition: 0.2s ease;
+}

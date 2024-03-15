@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap")
+  @tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+
+ font-family: "Montserrat", sans-serif;
+ font-family: "Public Sans", sans-serif;
+ */
+
+:root {
+  --color-white-tone: #f6f5f5;
+  --color-white-1: #fafafa;
+  --white: #fff;
+  --black: #000;
+  --dim-black: #181818;
+  --dark-blue: #0d1282;
+  --light-blue: #19a7ce;
+  --ice-blue: #a2d2ff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

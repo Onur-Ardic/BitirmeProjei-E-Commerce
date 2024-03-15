@@ -1,0 +1,85 @@
+img {
+  width: 100%;
+}
+
+.product-card {
+  width: 300px;
+  height: 350px;
+}
+
+.product-card .item-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+}
+
+.item-card .item-name {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 5px;
+}
+
+.product-card .item-card .image-wrapper {
+  position: relative;
+}
+
+.product-card .item-card .image-wrapper img {
+  width: 100%;
+  height: 400px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.product-card .item-card .image-wrapper .second-img {
+  position: absolute;
+  top: 0;
+}
+
+.product-card .item-card .image-wrapper img:hover {
+  opacity: 0;
+  transition: 0.3s ease all;
+}
+
+.product-card .item-card .price-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.product-card .item-card .price-wrapper .old-price {
+  text-decoration: line-through;
+  color: red;
+  font-weight: bold;
+}
+
+.product-card .item-card .icon-wrapper {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  top: 10px;
+  left: 15px;
+  z-index: 10;
+  transform: translateX(-50px);
+  opacity: 0;
+}
+
+.product-card .item-card:hover .icon-wrapper {
+  transform: translateX(0px);
+  opacity: 1;
+  transition: 0.2s ease all;
+}
+
+.product-card .item-card .icon-wrapper .icons button {
+  color: #000;
+  font-size: 18px;
+  background-color: #fafafa;
+  padding: 0.3rem;
+}
+
+.product-card .item-card .icon-wrapper .icons a {
+  color: #000;
+  font-size: 18px;
+  background-color: #fafafa;
+  padding: 0.3rem;
+}

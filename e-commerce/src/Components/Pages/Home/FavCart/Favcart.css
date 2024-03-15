@@ -1,0 +1,91 @@
+.cart-wrapper-fav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100vh;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-left: 1px solid #000;
+  background-color: var(--color-white-1);
+  animation: closeOn 1s ease;
+}
+
+@keyframes closeOn {
+  from {
+    opacity: 0;
+    transform: translateX(25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.cart-wrapper-fav .addFavTitle {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.cart-wrapper-fav .fav-close {
+  position: absolute;
+  left: 14px;
+  top: 15px;
+  font-size: 30px;
+}
+
+.fav-items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+  padding: 1rem;
+}
+
+.fav-items .icon {
+  color: red;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.fav-items .img img {
+  width: 70px;
+}
+
+.cart-buttons-wrapper {
+  margin-top: 30px;
+}
+
+.cart-wrapper-fav .delete-btn {
+  width: 100%;
+  background-color: red;
+  padding: 0.6rem;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid red;
+}
+
+.cart-wrapper-fav .delete-btn:hover {
+  background-color: #fff;
+  color: black;
+  transition: 0.2s ease;
+  border: 1px solid red;
+}
+
+.cart-wrapper-fav .basket-btn {
+  background-color: var(--light-blue);
+  padding: 0.6rem;
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  border: 1px solid var(--light-blue);
+  width: 100%;
+  display: block;
+}
+
+.cart-wrapper-fav .basket-btn:hover {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid var(--light-blue);
+  transition: 0.2s ease;
+}

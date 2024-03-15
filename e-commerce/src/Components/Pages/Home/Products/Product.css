@@ -1,0 +1,28 @@
+.products-wrapper {
+  padding-top: 2rem;
+  margin-top: 120px;
+}
+
+.products-wrapper:nth-child(3) {
+  margin-top: 0;
+}
+
+.products-wrapper:nth-child(0) {
+  margin-top: 0;
+}
+.products-wrapper .title {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid red;
+}
+
+.products-items {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

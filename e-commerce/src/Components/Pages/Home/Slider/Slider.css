@@ -1,0 +1,21 @@
+.slider-wrapper {
+  margin-bottom: 60px;
+}
+
+.slider-wrapper .slider {
+  border: 1px solid #0000;
+}
+
+.slider-wrapper .slider .carousel-item {
+  height: 400px;
+}
+
+.slider-wrapper .carousel-item .slider-text {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  width: 180%;
+  padding: 4rem;
+  font-weight: bold;
+  font-size: 20px;
+}

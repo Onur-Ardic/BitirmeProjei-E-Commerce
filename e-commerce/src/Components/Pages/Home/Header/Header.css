@@ -1,0 +1,122 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white-tone);
+  padding: 20px 10px;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .container .logo {
+  font-size: 30px;
+}
+
+.navbar .container .logo::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: black;
+  transform: translate(-50px);
+  cursor: pointer;
+  opacity: 0;
+  transition: 2s ease linear;
+}
+
+.navbar .container .logo:hover::after {
+  opacity: 1;
+  transform: translate(0);
+  transition: 1s ease;
+  cursor: pointer;
+}
+
+.navbar .container .links {
+  position: relative;
+}
+
+.navbar .container .links .navbar-item {
+  display: flex;
+  padding: 10px;
+  gap: 1rem;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.navbar .container .links .navbar-items::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: black;
+  transform: translateY(-40px) rotate(0.2turn);
+  cursor: pointer;
+  transition: 2s ease linear;
+  opacity: 0;
+}
+
+.navbar .container .links .navbar-items:hover::after {
+  opacity: 1;
+  transform: translate(0);
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.navbar .container .icons button {
+  font-size: 20px;
+  padding: 10px;
+}
+
+/* Dropdown Wrapper */
+.mega-dropdown-wrapper {
+  left: -150px;
+  top: 38px;
+  width: 500px;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1;
+  gap: 2rem;
+  background-color: var(--color-white-tone);
+  padding: 0.5rem;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.mega-dropdown-wrapper .categories-items {
+  width: 130px;
+  padding: 1rem;
+}
+
+.mega-dropdown-wrapper .categories-items .categories-item a {
+  font-size: 15px;
+  width: 60px;
+}
+
+.mega-dropdown-wrapper .categories-items .categories-item a:hover {
+  color: blue;
+}
+
+.navbar .container .navbar-item #mega:hover .mega-dropdown-wrapper {
+  visibility: visible;
+  opacity: 1;
+  transition: 1s ease;
+}
+
+.mega-dropdown-wrapper .mega-menu-right img {
+  border: 1px solid #fafafa;
+  border-radius: 2px;
+  margin-top: 1rem;
+}
+
+.mega-dropdown-wrapper .mega-menu-right .button-wrapper-mega-menu {
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}

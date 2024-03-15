@@ -1,0 +1,88 @@
+.banner-wrapper {
+  margin-top: 200px;
+}
+
+.banner-wrapper .banner-top,
+.banner-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 20px;
+}
+
+.banner-wrapper .banner-top .banner-top-first .banner-text {
+  font-size: 35px;
+  padding: 50px 10px;
+  font-weight: bold;
+  font-family: "Public Sans", sans-serif !important;
+  color: var(--ligt-blue);
+}
+
+.banner-wrapper .banner-top .banner-top-first {
+  background: url(/images/banner/banner-1.png);
+  background-size: cover;
+  height: 300px;
+  flex: 1;
+  border-radius: 5px;
+}
+
+.banner-wrapper .banner-top .banner-top-second {
+  background: url(/images/banner/banner.png);
+  flex: 1.9;
+  border-radius: 5px;
+}
+
+.banner-wrapper .banner-top .banner-top-second .banner-text-second {
+  font-size: 35px;
+  text-align: end;
+  padding: 69px 40px;
+  font-weight: bold;
+  font-family: "Public Sans", sans-serif !important;
+  color: #fff;
+}
+
+.banner-wrapper .banner-bottom .banner-bottom-first {
+  background: url(/images/banner/banner-image-1.png);
+  background-size: cover;
+  background-clip: padding-box;
+  aspect-ratio: 16/9;
+  height: 400px;
+  flex: 1.9;
+  border-radius: 5px;
+  position: relative;
+}
+
+.banner-wrapper .banner-bottom .banner-bottom-first .banner-btn {
+  border: 1px solid #fff;
+  padding: 0.7rem 2rem;
+  background-color: #fff;
+  font-weight: bold;
+  color: #000;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-wrapper .banner-bottom .banner-bottom-first .banner-btn:hover {
+  background-color: transparent;
+  color: #fff;
+  transition: 0.2s ease;
+}
+
+.banner-wrapper .banner-bottom .banner-bottom-second {
+  background: url(/images/banner/banner-4.png);
+  flex: 1;
+  border-radius: 5px;
+}
+
+.banner-wrapper .banner-bottom .banner-bottom-second .banner-text-second {
+  font-size: 35px;
+  margin-bottom: 60px;
+  padding: 80px 40px;
+  font-weight: bold;
+  font-family: "Public Sans", sans-serif !important;
+  color: #fff;
+}
