@@ -33,11 +33,13 @@ const Cosmeticİtem = ({ cosmetic }) => {
             </li>
 
             <li className="icons">
-              <button href="#">
-                <FontAwesomeIcon
-                  icon={faCartShopping}
-                  onClick={() => addİtem(cosmetic)}
-                />
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  addİtem(cosmetic);
+                }}
+              >
+                <FontAwesomeIcon icon={faCartShopping} />
               </button>
             </li>
 
@@ -45,7 +47,10 @@ const Cosmeticİtem = ({ cosmetic }) => {
               <button>
                 <FontAwesomeIcon
                   icon={faHeart}
-                  onClick={() => addFav(cosmetic)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    addFav(cosmetic);
+                  }}
                 />
               </button>
             </li>

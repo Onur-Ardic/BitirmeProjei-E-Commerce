@@ -1,5 +1,9 @@
+import { useContext } from "react";
+import { MainContext } from "../../../../Context";
+
 /* eslint-disable react/prop-types */
 const FavCartItem = ({ favCart }) => {
+  const { removeFav } = useContext(MainContext);
   const { name, price, img } = favCart;
   return (
     <>
@@ -13,7 +17,15 @@ const FavCartItem = ({ favCart }) => {
           <p className="price">{price}TL</p>
         </div>
 
-        <div className="icon">X</div>
+        <div
+          className="icon"
+          onClick={(e) => {
+            e.preventDefault();
+            removeFav(favCart.id);
+          }}
+        >
+          X
+        </div>
       </div>
     </>
   );

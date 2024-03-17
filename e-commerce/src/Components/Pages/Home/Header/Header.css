@@ -70,6 +70,19 @@
 .navbar .container .icons button {
   font-size: 20px;
   padding: 10px;
+  position: relative;
+}
+
+.navbar .container .icons button .cart-amount,
+.fav-item-amount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 12px;
+  background-color: red;
+  width: 15px;
+  color: #fafafa;
+  border-radius: 50%;
 }
 
 /* Dropdown Wrapper */

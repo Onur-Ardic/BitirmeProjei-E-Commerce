@@ -48,6 +48,10 @@
   color: red;
 }
 
+.cart-wrapper .cart-item .delete {
+  cursor: pointer;
+}
+
 .cart-wrapper .close-btn {
   position: absolute;
   top: 10px;

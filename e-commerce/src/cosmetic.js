@@ -1,6 +1,6 @@
 const cosmeticdata = [
   {
-    id: 1,
+    id: 5,
     name: "Vücut Losyonu",
     price: 280,
     oldPrice: 310.0,
@@ -10,7 +10,7 @@ const cosmeticdata = [
   },
 
   {
-    id: 2,
+    id: 6,
     name: "Nemlendirici Krem",
     oldPrice: 270.0,
     price: 292.0,
@@ -19,7 +19,7 @@ const cosmeticdata = [
     img1: "/images/cosmetic/krem-1.png",
   },
   {
-    id: 3,
+    id: 7,
     name: "Cilt Serumu",
     oldPrice: 859.0,
     price: 1100.0,
@@ -28,7 +28,7 @@ const cosmeticdata = [
     img1: "/images/cosmetic/serum-1.png",
   },
   {
-    id: 4,
+    id: 8,
     name: "Güneş Kremi",
     oldPrice: 320.0,
     price: 360.0,

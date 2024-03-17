@@ -36,17 +36,22 @@ const Teknolojiİtem = ({ teknoloji }) => {
               <button href="#">
                 <FontAwesomeIcon
                   icon={faCartShopping}
-                  onClick={() => addİtem(teknoloji)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    addİtem(teknoloji);
+                  }}
                 />
               </button>
             </li>
 
             <li className="icons">
-              <button>
-                <FontAwesomeIcon
-                  icon={faHeart}
-                  onClick={() => addFav(teknoloji)}
-                />
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  addFav(teknoloji);
+                }}
+              >
+                <FontAwesomeIcon icon={faHeart} />
               </button>
             </li>
           </ul>

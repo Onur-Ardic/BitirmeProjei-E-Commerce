@@ -20,6 +20,7 @@ function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [cartShow, setCartİsShow] = useState(false);
   const [cartFavShow, setCartFavShow] = useState(false);
+  const [isClass, setİsclass] = useState(false);
 
   const handleIconClick = () => {
     setIsModalOpen(true);
@@ -48,23 +49,20 @@ function App() {
   const cartReducer = (state, action) => {
     switch (action.type) {
       case "ADD":
-        let updatedİtems = [...state.items];
+        let updatedİtems = [...state?.items];
         updatedİtems = [...state.items, action.item];
         return {
           items: updatedİtems,
         };
 
-      case "ADDFAV":
-        let favİtemsUpdate = [...state.favitems];
-        favİtemsUpdate = [...state.favitems, action.favitem];
-        return {
-          favitems: favİtemsUpdate,
-        };
       case "REMOVE":
-        return state;
+        let filteredİtem = state.items.filter((item) => item.id !== action.id);
+        return {
+          items: filteredİtem,
+        };
 
       case "CLEAR":
-        return state;
+        return defaultCartState;
 
       default:
         return state;
@@ -82,17 +80,20 @@ function App() {
   const favReducer = (state, action) => {
     switch (action.type) {
       case "ADDFAV":
-        let favİtemUpdate = [...state.favitems];
+        let favİtemUpdate = [...state?.favitems];
         favİtemUpdate = [...state.favitems, action.favitem];
         return {
           favitems: favİtemUpdate,
         };
 
       case "REMOVEFAV":
-        return state;
+        let uptadefFavİtems = state?.favitems.filter(
+          (item) => item.id !== action.id
+        );
+        return uptadefFavİtems;
 
       case "CLEARFAV":
-        return state;
+        return defaultFavState;
 
       default:
     }
@@ -120,18 +121,26 @@ function App() {
     closeFavCartHandler,
     items: cartState.items,
     favitems: cartFav.favitems,
+    isClass,
+    setİsclass,
     addİtem: (item) => {
-      {
-        dispatchCartAction({ type: "ADD", item });
-      }
+      dispatchCartAction({ type: "ADD", item });
     },
-    removeİtem: () => {},
-    clearCart: () => {},
+    removeİtem: (id) => {
+      dispatchCartAction({ type: "REMOVE", id });
+    },
+    clearCart: () => {
+      dispatchCartAction({ type: "CLEAR" });
+    },
     addFav: (favitem) => {
       dispatchFavAction({ type: "ADDFAV", favitem });
     },
-    removeFav: () => {},
-    clearFav: () => {},
+    removeFav: (id) => {
+      dispatchFavAction({ type: "REMOVEFAV", id });
+    },
+    clearFav: () => {
+      dispatchFavAction({ type: "CLEARFAV" });
+    },
   };
 
   return (

@@ -14,7 +14,7 @@ import { MainContext } from "../../../../Context";
 const Productİtem = ({ Clothesİtem }) => {
   const { name, img, img1, price, oldPrice } = Clothesİtem;
   const { addİtem, items, addFav } = useContext(MainContext);
-  console.log(items);
+
   return (
     <div className="product-card">
       <li className="item-card">
@@ -37,11 +37,13 @@ const Productİtem = ({ Clothesİtem }) => {
             </li>
 
             <li className="icons">
-              <button>
-                <FontAwesomeIcon
-                  icon={faCartShopping}
-                  onClick={() => addİtem(Clothesİtem)}
-                />
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  addİtem(Clothesİtem);
+                }}
+              >
+                <FontAwesomeIcon icon={faCartShopping} />
               </button>
             </li>
 
@@ -49,7 +51,10 @@ const Productİtem = ({ Clothesİtem }) => {
               <button>
                 <FontAwesomeIcon
                   icon={faHeart}
-                  onClick={() => addFav(Clothesİtem)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    addFav(Clothesİtem);
+                  }}
                 />
               </button>
             </li>

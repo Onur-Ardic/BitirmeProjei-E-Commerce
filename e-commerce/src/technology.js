@@ -1,8 +1,6 @@
 const technologydata = [
-  
-
   {
-    id: 1,
+    id: 9,
     name: "İphone 11",
     oldPrice: 27000.0,
     price: 26200.0,
@@ -12,7 +10,7 @@ const technologydata = [
     img2: "/images/technology/iphone-11.png",
   },
   {
-    id: 2,
+    id: 10,
     name: "JBL Tune 560BT",
     oldPrice: 1299.0,
     price: 1100.0,
@@ -22,7 +20,7 @@ const technologydata = [
     img2: "/images/technology/jbl-2.png",
   },
   {
-    id: 3,
+    id: 11,
     name: "Monster Abra",
     oldPrice: 31500.0,
     price: 29299.0,
@@ -31,7 +29,7 @@ const technologydata = [
     img1: "/images/technology/monster-1.jpg",
   },
   {
-    id: 4,
+    id: 12,
     name: "Redmi Watch 3",
     oldPrice: 1300.0,
     price: 1199.0,

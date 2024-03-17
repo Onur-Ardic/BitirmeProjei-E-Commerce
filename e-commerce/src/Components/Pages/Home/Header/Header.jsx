@@ -13,8 +13,11 @@ import { MainContext } from "../../../../Context";
 
 // function
 const Header = () => {
-  const { handleIconClick, showCartHanlder, favCartHandler } =
+  const { handleIconClick, showCartHanlder, favCartHandler, items, favitems } =
     useContext(MainContext);
+
+  const itemAmount = items?.length;
+  const favİtemsAmount = favitems?.length;
   return (
     <>
       <nav className="navbar">
@@ -55,6 +58,8 @@ const Header = () => {
                 style={{ color: "#ff0000" }}
                 onClick={favCartHandler}
               />
+
+              <p className="fav-item-amount">{favİtemsAmount}</p>
             </button>
 
             <button>
@@ -62,6 +67,8 @@ const Header = () => {
                 icon={faCartShopping}
                 onClick={showCartHanlder}
               />
+
+              <p className="cart-amount">{itemAmount}</p>
             </button>
           </div>
         </div>
