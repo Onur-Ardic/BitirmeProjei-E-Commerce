@@ -7,10 +7,11 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext } from "react";
 import { MainContext } from "../../../../Context";
+
 /* eslint-disable react/prop-types */
 const Teknolojiİtem = ({ teknoloji }) => {
   const { name, oldPrice, price, img, img1 } = teknoloji;
-  const { addİtem, addFav } = useContext(MainContext);
+  const { addİtem, addFav, showİtem } = useContext(MainContext);
   return (
     <div className="product-card">
       <li className="item-card">
@@ -27,7 +28,13 @@ const Teknolojiİtem = ({ teknoloji }) => {
 
           <ul className="icon-wrapper">
             <li className="icons">
-              <a href="#">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  showİtem(teknoloji);
+                }}
+              >
                 <FontAwesomeIcon icon={faEye} />
               </a>
             </li>

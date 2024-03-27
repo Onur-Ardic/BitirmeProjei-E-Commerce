@@ -10,7 +10,7 @@ import { MainContext } from "../../../../Context";
 
 const Cosmeticİtem = ({ cosmetic }) => {
   const { name, price, oldPrice, img, img1 } = cosmetic;
-  const { addİtem, addFav } = useContext(MainContext);
+  const { addİtem, addFav, showİtem } = useContext(MainContext);
   return (
     <div className="product-card">
       <li className="item-card">
@@ -27,7 +27,13 @@ const Cosmeticİtem = ({ cosmetic }) => {
 
           <ul className="icon-wrapper">
             <li className="icons">
-              <a href="#">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  showİtem(cosmetic);
+                }}
+              >
                 <FontAwesomeIcon icon={faEye} />
               </a>
             </li>

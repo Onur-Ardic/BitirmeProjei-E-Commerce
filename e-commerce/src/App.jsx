@@ -1,3 +1,5 @@
+/* eslint-disable no-unsafe-optional-chaining */
+/* eslint-disable no-case-declarations */
 import "./App.css";
 import { useReducer, useState } from "react";
 import Header from "./Components/Pages/Home/Header/Header";
@@ -140,6 +142,10 @@ function App() {
     },
     clearFav: () => {
       dispatchFavAction({ type: "CLEARFAV" });
+    },
+    showİtem: (show) => {
+      const showProduct = show;
+      console.log(showProduct);
     },
   };
 

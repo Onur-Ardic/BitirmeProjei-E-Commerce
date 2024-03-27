@@ -13,7 +13,7 @@ import { MainContext } from "../../../../Context";
 // eslint-disable-next-line react/prop-types
 const Productİtem = ({ Clothesİtem }) => {
   const { name, img, img1, price, oldPrice } = Clothesİtem;
-  const { addİtem, items, addFav } = useContext(MainContext);
+  const { addİtem, items, addFav, showİtem } = useContext(MainContext);
 
   return (
     <div className="product-card">
@@ -31,7 +31,13 @@ const Productİtem = ({ Clothesİtem }) => {
 
           <ul className="icon-wrapper">
             <li className="icons">
-              <a href="#">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  showİtem(Clothesİtem);
+                }}
+              >
                 <FontAwesomeIcon icon={faEye} />
               </a>
             </li>
